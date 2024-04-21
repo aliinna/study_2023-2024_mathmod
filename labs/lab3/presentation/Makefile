@@ -18,11 +18,7 @@ REVEALJS_THEME = beige
 	-@pandoc "$<" $(FILTERS) $(PDF_ENGINE) $(PDF_OPTIONS) $(PDF_FORMAT_OPTIONS) -o "$@"
 
 %.html: %.md
-<<<<<<< HEAD
-	-@pandoc "$<" --standalone -t revealjs -V theme=$(REVEALJS_THEME) -o "$@"
-=======
 	-@pandoc "$<" --self-contained -t revealjs -V theme=$(REVEALJS_THEME) -o "$@"
->>>>>>> fcf77de3714b6a63fda6ab0277b5d641afdf54cd
 
 all: $(FILES)
 
